@@ -16,12 +16,13 @@
 <meta property="og:site_name" content="yuy&#39;s blog">
 <meta property="og:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法其重要的迭代用的公式是这条:$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="e:/yuy/blog/yuy-blog/source/img/bg.jpg">
 <meta property="og:image" content="https://s2.ax1x.com/2019/02/14/kBtFJA.png">
-<meta property="og:updated_time" content="2019-03-12T03:00:52.989Z">
+<meta property="og:updated_time" content="2019-03-12T07:36:11.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&#39;题解 P3382 【【模板】三分法】(粒子群优化)&#39;">
 <meta name="twitter:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法其重要的迭代用的公式是这条:$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/02/14/kBtFJA.png">
+<meta name="twitter:image" content="e:/yuy/blog/yuy-blog/source/img/bg.jpg">
   
     <link rel="alternative" href="/atom.xml" title="yuy&#39;s blog" type="application/atom+xml">
   
@@ -192,7 +193,7 @@
 <p>$ b[a].x += b[a].v; $</p>
 <h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>_PSO算法是基于群体的，根据对环境的适应度将群体中的个体移动到好的区域。然而它不对个体使用演化算子，而是将每个个体看作是D维搜索空间中的一个没有体积的微粒（点），在搜索空间中以一定的速度飞行，这个速度根据它本身的飞行经验和同伴的飞行经验来动态调整。第i个微粒表示为Xi= （xi1, xi2, …, xiD），它经历过的最好位置（有最好的适应值）记为Pi= （pi1, pi2, …, piD），也称为pbest。在群体所有微粒经历过的最好位置的索引号用符号g表示，即Pg，也称为gbest。微粒i的速度用Vi= （vi1, vi2, …, viD）表示。<br>_</p>
 <p>引用自<a href="https://baike.baidu.com/item/%E7%B2%92%E5%AD%90%E7%BE%A4%E4%BC%98%E5%8C%96/1352052?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
-<h4 id="粒子群优化算法流程图："><a href="#粒子群优化算法流程图：" class="headerlink" title="粒子群优化算法流程图："></a>粒子群优化算法流程图：</h4><p><img src="https://s2.ax1x.com/2019/02/14/kBtFJA.png" alt></p>
+<h4 id="粒子群优化算法流程图："><a href="#粒子群优化算法流程图：" class="headerlink" title="粒子群优化算法流程图："></a>粒子群优化算法流程图：</h4><p><img src="E:\yuy\blog\yuy-blog\source\img\bg.jpg" alt><br><img src="https://s2.ax1x.com/2019/02/14/kBtFJA.png" alt></p>
 <h4 id="所以"><a href="#所以" class="headerlink" title="所以"></a>所以</h4><p>对于这道题目我们先初始化他个$ 100 $个粒子，随机地在$ \begin{bmatrix}l,r\end{bmatrix} $区间里取x值，接着计算一下这个值对应的函数值且记录一下全局最优（更新时要用到）。</p>
 <p>然后通过公式迭代他个$ 100 $次。</p>
 <p>那就可以得到答案了。</p>
@@ -466,15 +467,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">粒子群优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">粒子群优化</a>
               </li>
             
             <div class="clearfix"></div>
