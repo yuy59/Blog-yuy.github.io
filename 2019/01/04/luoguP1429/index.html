@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://syuy.github.io">
-  <title>Hello World | yuy&#39;s blog</title>
+  <title>&#39;题解 P1429 【平面最近点对（加强版）】&#39; | yuy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案(算法导论里有提到这个算法)">
+<meta name="keywords" content="题解,排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://syuy.github.io/2019/03/11/hello-world/index.html">
+<meta property="og:title" content="&#39;题解 P1429 【平面最近点对（加强版）】&#39;">
+<meta property="og:url" content="http://syuy.github.io/2019/01/04/luoguP1429/index.html">
 <meta property="og:site_name" content="yuy&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案(算法导论里有提到这个算法)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T02:22:49.278Z">
+<meta property="og:updated_time" content="2019-03-12T03:00:49.880Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="&#39;题解 P1429 【平面最近点对（加强版）】&#39;">
+<meta name="twitter:description" content="随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案(算法导论里有提到这个算法)">
   
     <link rel="alternative" href="/atom.xml" title="yuy&#39;s blog" type="application/atom+xml">
   
@@ -29,7 +30,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#B0BFDE,#799ACD);
+      background: linear-gradient(200deg,#FFC0CB,#66CCFF);
     }
   </style>
   
@@ -53,6 +54,8 @@
 		  <h1 class="header-author"><a href="/">yuy</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">心有猛虎，细嗅蔷薇。</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -60,6 +63,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+				<li><a href="/tags/题解/">题解</a></li>
 	        
 			</ul>
 		</nav>
@@ -109,7 +114,11 @@
 			  <h1 class="header-author js-header-author">yuy</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>心有猛虎，细嗅蔷薇。<i class="icon icon-quo-right"></i></p>
 			
+			
+			
+				
 			
 				
 			
@@ -130,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/题解/">题解</a></li>
 		        
 				</ul>
 			</nav>
@@ -150,36 +161,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-luoguP1429" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      &#39;题解 P1429 【平面最近点对（加强版）】&#39;
     </h1>
   
 
         
-        <a href="/2019/03/11/hello-world/" class="archive-article-date">
-  	<time datetime="2019-03-11T02:22:49.278Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-11</time>
+        <a href="/2019/01/04/luoguP1429/" class="archive-article-date">
+  	<time datetime="2019-01-04T00:20:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h1 id="随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案-算法导论里有提到这个算法"><a href="#随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案-算法导论里有提到这个算法" class="headerlink" title="随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案(算法导论里有提到这个算法)"></a>随机旋转，按横坐标排序后枚举每个点与其后面5个点的距离取最小值更新答案(算法导论里有提到这个算法)</h1><a id="more"></a>
+<h3 id="我这里随机旋转了两次（你想要转几次都行）"><a href="#我这里随机旋转了两次（你想要转几次都行）" class="headerlink" title="我这里随机旋转了两次（你想要转几次都行）"></a>我这里随机旋转了两次<del>（你想要转几次都行）</del></h3><h4 id="记得初始化数据不然排序后的后面几个数据会凑巧有几个点在（0-0）旁可能会把答案更新成与（0-0）之间的距离。"><a href="#记得初始化数据不然排序后的后面几个数据会凑巧有几个点在（0-0）旁可能会把答案更新成与（0-0）之间的距离。" class="headerlink" title="记得初始化数据不然排序后的后面几个数据会凑巧有几个点在（0,0）旁可能会把答案更新成与（0,0）之间的距离。"></a>记得初始化数据不然排序后的后面几个数据会凑巧有几个点在（0,0）旁可能会把答案更新成与（0,0）之间的距离。</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 9999999999.0</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">double</span> x,y;</span><br><span class="line">&#125;a[<span class="number">2000010</span>];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">double</span> ans=INF;				<span class="comment">//初始化答案为一个很大的数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a.x&lt;b.x;			<span class="comment">//按照横坐标排序</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">len</span><span class="params">(node a,node b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">sqrt</span>((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));<span class="comment">//计算两点之间距离</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">calc</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=i+<span class="number">5</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">double</span> temp;</span><br><span class="line">			temp=len(a[i],a[j]);</span><br><span class="line">			ans=min(ans,temp);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">around</span><span class="params">(<span class="keyword">int</span> ds)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">double</span> x=a[i].x,y=a[i].y;<span class="comment">//旋转前的点</span></span><br><span class="line">		<span class="keyword">double</span> xn,yn;            <span class="comment">//旋转后的点</span></span><br><span class="line">		<span class="keyword">double</span> xyu=<span class="number">0.0</span>,yyu=<span class="number">0.0</span>;  <span class="comment">//原点</span></span><br><span class="line">		xn= (x - xyu)*<span class="built_in">cos</span>(ds) - (y - yyu)*<span class="built_in">sin</span>(ds) + xyu ;</span><br><span class="line">    	yn= (x - xyu)*<span class="built_in">sin</span>(ds) + (y - yyu)*<span class="built_in">cos</span>(ds) + yyu ;</span><br><span class="line">    	a[i].x=xn;</span><br><span class="line">    	a[i].y=yn;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n,cmp);		<span class="comment">//顺便排序</span></span><br><span class="line">	calc();						<span class="comment">//顺便计算</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	srand(time(<span class="literal">NULL</span>));			<span class="comment">//随机数种子</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">200009</span>;i++)&#123;</span><br><span class="line">		a[i].x=INF;a[i].y=INF;	<span class="comment">//初始化</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;a[i].x,&amp;a[i].y);</span><br><span class="line">	&#125;</span><br><span class="line">	around(<span class="number">0</span>);					<span class="comment">//将原图像进行排序并枚举每个点与其后五个点比较</span></span><br><span class="line">	around(rand()%<span class="number">360</span>);			<span class="comment">//将图像随机（0°~359°）旋转  并排序 并计算</span></span><br><span class="line">	around(rand()%<span class="number">360</span>);			<span class="comment">//将图像随机（0°~359°）旋转  并排序 并计算</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.4lf"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="旋转公式："><a href="#旋转公式：" class="headerlink" title="旋转公式："></a>旋转公式：</h3><h3 id="x-x1-x2-cos-θ-y1-y2-sin-θ-x2"><a href="#x-x1-x2-cos-θ-y1-y2-sin-θ-x2" class="headerlink" title="x= (x1 - x2)cos(θ) - (y1 - y2)sin(θ) + x2 ;"></a>x= (x1 - x2)<em>cos(θ) - (y1 - y2)</em>sin(θ) + x2 ;</h3><h3 id="y-x1-x2-sin-θ-y1-y2-cos-θ-y2"><a href="#y-x1-x2-sin-θ-y1-y2-cos-θ-y2" class="headerlink" title="y= (x1 - x2)sin(θ) + (y1 - y2)cos(θ) + y2 ;"></a>y= (x1 - x2)<em>sin(θ) + (y1 - y2)</em>cos(θ) + y2 ;</h3>
       
 
       
@@ -187,6 +191,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -237,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://syuy.github.io/2019/03/11/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://syuy.github.io/2019/01/04/luoguP1429/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -249,6 +268,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/02/14/luoguP3328/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          &#39;题解 P3382 【【模板】三分法】(粒子群优化)&#39;
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -274,8 +307,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://syuy.github.io/2019/03/11/hello-world/", 
-    sourceId: "hello-world",
+    url: "http://syuy.github.io/2019/01/04/luoguP1429/", 
+    sourceId: "luoguP1429",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -287,6 +320,22 @@
 
   
 
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://syuy.github.io/2019/01/04/luoguP1429/",
+  owner: 'syuy',
+  repo: 'syuy.github.io',
+  oauth: {
+    client_id: 'e554c15b6f46e1ecbd04',
+    client_secret: 'a49292465b2190677ef9048cf5dd1991eb5a2b1c',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -318,7 +367,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -399,6 +448,26 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">题解</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">粒子群优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -449,27 +518,7 @@ MathJax.Hub.Queue(function() {
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://heartlessly.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Heartlessly&#39;s blog</a>
             </li>
           
         </ul>
@@ -480,7 +529,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">Shi Yu Yang 一只大蒟蒻</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Shi Yu Yang</div>
   	  	
     	</section>
     
