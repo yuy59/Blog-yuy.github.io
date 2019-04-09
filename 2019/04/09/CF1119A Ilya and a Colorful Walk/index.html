@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://syuy.github.io">
-  <title>Tag: 数论 | yuy&#39;s blog</title>
+  <title>&#39;CF1119A Ilya and a Colorful Walk&#39; | yuy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yuy&#39;s blog">
-<meta property="og:url" content="http://syuy.github.io/tags/数论/index.html">
+  <meta name="description" content="水一篇 cf的水题 ヽ(￣▽￣)ﾉ codeforces点我！ Luogu点我！">
+<meta name="keywords" content="题解,CF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#39;CF1119A Ilya and a Colorful Walk&#39;">
+<meta property="og:url" content="http://syuy.github.io/2019/04/09/CF1119A Ilya and a Colorful Walk/index.html">
 <meta property="og:site_name" content="yuy&#39;s blog">
+<meta property="og:description" content="水一篇 cf的水题 ヽ(￣▽￣)ﾉ codeforces点我！ Luogu点我！">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-09T10:40:44.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yuy&#39;s blog">
+<meta name="twitter:title" content="&#39;CF1119A Ilya and a Colorful Walk&#39;">
+<meta name="twitter:description" content="水一篇 cf的水题 ヽ(￣▽￣)ﾉ codeforces点我！ Luogu点我！">
   
     <link rel="alternative" href="/atom.xml" title="yuy&#39;s blog" type="application/atom+xml">
   
@@ -156,36 +161,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CF1119A Ilya and a Colorful Walk" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/02/2721 [Violet 5]樱花/" class="archive-article-date">
-  	<time datetime="2019-04-02T12:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/02/2721 [Violet 5]樱花/">&#39;BZOJ：2721: [Violet 5]樱花&#39;</a>
+    <h1 class="article-title" itemprop="name">
+      &#39;CF1119A Ilya and a Colorful Walk&#39;
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/04/09/CF1119A Ilya and a Colorful Walk/" class="archive-article-date">
+  	<time datetime="2019-04-09T10:35:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>水一篇 cf的水题 ヽ(￣▽￣)ﾉ</p>
+<p><a href="http://codeforces.com/contest/1119/problem/A" target="_blank" rel="noopener">codeforces点我！</a></p>
+<p><a href="https://www.luogu.org/problemnew/show/CF1119A" target="_blank" rel="noopener">Luogu点我！</a></p>
+<a id="more"></a>
+<p><del>看完样例就可以想到：</del></p>
+<h3 id="答案肯定包括第一座房子和最后一座房子。"><a href="#答案肯定包括第一座房子和最后一座房子。" class="headerlink" title="答案肯定包括第一座房子和最后一座房子。"></a>答案肯定包括第一座房子和最后一座房子。</h3><p>简单证明一下。</p>
+<h4 id="如果存在某个方案是选择-a-i-和-a-j-1-lt-i-lt-j-lt-n-c-i-c-j-的"><a href="#如果存在某个方案是选择-a-i-和-a-j-1-lt-i-lt-j-lt-n-c-i-c-j-的" class="headerlink" title="如果存在某个方案是选择 $a_i$ 和 $a_j$ $(1&lt;i&lt;j&lt;n,c_i!=c_j)$ 的"></a>如果存在某个方案是选择 $a_i$ 和 $a_j$ $(1&lt;i&lt;j&lt;n,c_i!=c_j)$ 的</h4><h4 id="那么"><a href="#那么" class="headerlink" title="那么"></a>那么</h4><h4 id="如果-a-1-和-a-i-颜色一样，那-a-1-和-a-j-这个方案更优。"><a href="#如果-a-1-和-a-i-颜色一样，那-a-1-和-a-j-这个方案更优。" class="headerlink" title="如果 $a_1$ 和 $a_i$ 颜色一样，那 $a_1$ 和 $a_j$ 这个方案更优。"></a>如果 $a_1$ 和 $a_i$ 颜色一样，那 $a_1$ 和 $a_j$ 这个方案更优。</h4><h4 id="如果-a-1-和-a-i-颜色不一样，并且-a-1-和-a-j-颜色也不一样，那-a-1-和-a-j-这个方案更优。"><a href="#如果-a-1-和-a-i-颜色不一样，并且-a-1-和-a-j-颜色也不一样，那-a-1-和-a-j-这个方案更优。" class="headerlink" title="如果 $a_1$ 和 $a_i$ 颜色不一样，并且 $a_1$ 和 $a_j$ 颜色也不一样，那 $a_1$ 和 $a_j$ 这个方案更优。"></a>如果 $a_1$ 和 $a_i$ 颜色不一样，并且 $a_1$ 和 $a_j$ 颜色也不一样，那 $a_1$ 和 $a_j$ 这个方案更优。</h4><h4 id="如果-a-j-和-a-n-颜色一样，那-a-i-和-a-n-这个方案更优。"><a href="#如果-a-j-和-a-n-颜色一样，那-a-i-和-a-n-这个方案更优。" class="headerlink" title="如果 $a_j$ 和 $a_n$ 颜色一样，那 $a_i$ 和 $a_n$ 这个方案更优。"></a>如果 $a_j$ 和 $a_n$ 颜色一样，那 $a_i$ 和 $a_n$ 这个方案更优。</h4><h4 id="如果-a-j-和-a-n-颜色不一样，并且-a-i-和-a-n-颜色也不一样，那-a-i-和-a-n-这个方案更优。"><a href="#如果-a-j-和-a-n-颜色不一样，并且-a-i-和-a-n-颜色也不一样，那-a-i-和-a-n-这个方案更优。" class="headerlink" title="如果 $a_j$ 和 $a_n$ 颜色不一样，并且 $a_i$ 和 $a_n$ 颜色也不一样，那 $a_i$ 和 $a_n$ 这个方案更优。"></a>如果 $a_j$ 和 $a_n$ 颜色不一样，并且 $a_i$ 和 $a_n$ 颜色也不一样，那 $a_i$ 和 $a_n$ 这个方案更优。</h4><h4 id="如果-a-1-和-a-j-颜色一样-并且-a-i-和-a-n-颜色一样呢？"><a href="#如果-a-1-和-a-j-颜色一样-并且-a-i-和-a-n-颜色一样呢？" class="headerlink" title="如果 $a_1$ 和 $a_j$ 颜色一样 并且 $a_i$ 和 $a_n$ 颜色一样呢？"></a>如果 $a_1$ 和 $a_j$ 颜色一样 并且 $a_i$ 和 $a_n$ 颜色一样呢？</h4><h4 id="那么因为-a-i-与-a-j-颜色不一样所以-a-1-与-a-n-颜色也不一样啊！那没有比-“-a-1-和-a-n-”-这个方案更好的方案了。"><a href="#那么因为-a-i-与-a-j-颜色不一样所以-a-1-与-a-n-颜色也不一样啊！那没有比-“-a-1-和-a-n-”-这个方案更好的方案了。" class="headerlink" title="那么因为 $a_i$ 与 $a_j$ 颜色不一样所以 $a_1$ 与 $a_n$ 颜色也不一样啊！那没有比 “$a_1$ 和 $a_n$”  这个方案更好的方案了。"></a>那么因为 $a_i$ 与 $a_j$ 颜色不一样所以 $a_1$ 与 $a_n$ 颜色也不一样啊！那没有比 “$a_1$ 和 $a_n$”  这个方案更好的方案了。</h4><h3 id="code："><a href="#code：" class="headerlink" title="code："></a>code：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Set(s,v) memset(s,v,sizeof(s))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LL ans=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)&#123;f=<span class="number">-1</span>;&#125;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;ans=ans*<span class="number">10</span>+ch<span class="number">-48</span>;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">return</span> ans*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(LL x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span>)&#123;<span class="built_in">putchar</span>(<span class="string">'-'</span>);x=-x;&#125;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;<span class="number">9</span>)&#123;write(x/<span class="number">10</span>);&#125;</span><br><span class="line">    <span class="built_in">putchar</span>(x%<span class="number">10</span>|<span class="number">48</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">300005</span>];</span><br><span class="line"><span class="keyword">int</span> dis=<span class="number">-1</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    n=read();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        a[i]=read();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n;i&gt;<span class="number">1</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]!=a[<span class="number">1</span>]&amp;&amp;(i<span class="number">-1</span>)&gt;dis)&#123;</span><br><span class="line">            dis=i<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]!=a[n]&amp;&amp;(n-i)&gt;dis)&#123;</span><br><span class="line">            dis=n-i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    write(dis);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,67 +204,112 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CF</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://syuy.github.io/2019/04/09/CF1119A Ilya and a Colorful Walk/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/29/luoguP3197/" class="archive-article-date">
-  	<time datetime="2019-03-29T12:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/02/2721 [Violet 5]樱花/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;BZOJ：2721: [Violet 5]樱花&#39;</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/29/luoguP3197/">&#39;P3197 [HNOI2008]越狱&#39;</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -278,9 +332,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
