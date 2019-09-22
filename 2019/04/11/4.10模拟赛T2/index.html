@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://syuy.github.io">
-  <title>&#39;CF1119A Ilya and a Colorful Walk&#39; | yuy&#39;s blog</title>
+  <title>&#39;4.10模拟赛T2&#39; | yuy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="水一篇 cf的水题 ヽ(￣▽￣)ﾉ codeforces点我！ Luogu点我！">
-<meta name="keywords" content="题解,CF">
+  <meta name="description" content="T2（矩阵快速幂）: Luogu点我！ BZOJ点我！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&#39;CF1119A Ilya and a Colorful Walk&#39;">
-<meta property="og:url" content="http://syuy.github.io/2019/04/09/CF1119A Ilya and a Colorful Walk/index.html">
+<meta property="og:title" content="&#39;4.10模拟赛T2&#39;">
+<meta property="og:url" content="http://syuy.github.io/2019/04/11/4.10模拟赛T2/index.html">
 <meta property="og:site_name" content="yuy&#39;s blog">
-<meta property="og:description" content="水一篇 cf的水题 ヽ(￣▽￣)ﾉ codeforces点我！ Luogu点我！">
+<meta property="og:description" content="T2（矩阵快速幂）: Luogu点我！ BZOJ点我！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T10:40:44.295Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/11/A7MAd1.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/11/A7MSRU.png">
+<meta property="og:updated_time" content="2019-09-22T01:45:14.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="&#39;CF1119A Ilya and a Colorful Walk&#39;">
-<meta name="twitter:description" content="水一篇 cf的水题 ヽ(￣▽￣)ﾉ codeforces点我！ Luogu点我！">
+<meta name="twitter:title" content="&#39;4.10模拟赛T2&#39;">
+<meta name="twitter:description" content="T2（矩阵快速幂）: Luogu点我！ BZOJ点我！">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/04/11/A7MAd1.md.png">
   
     <link rel="alternative" href="/atom.xml" title="yuy&#39;s blog" type="application/atom+xml">
   
@@ -161,33 +163,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CF1119A Ilya and a Colorful Walk" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-4.10模拟赛T2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      &#39;CF1119A Ilya and a Colorful Walk&#39;
+      &#39;4.10模拟赛T2&#39;
     </h1>
   
 
         
-        <a href="/2019/04/09/CF1119A Ilya and a Colorful Walk/" class="archive-article-date">
-  	<time datetime="2019-04-09T10:35:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-09</time>
+        <a href="/2019/04/11/4.10模拟赛T2/" class="archive-article-date">
+  	<time datetime="2019-04-11T00:15:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>水一篇 cf的水题 ヽ(￣▽￣)ﾉ</p>
-<p><a href="http://codeforces.com/contest/1119/problem/A" target="_blank" rel="noopener">codeforces点我！</a></p>
-<p><a href="https://www.luogu.org/problemnew/show/CF1119A" target="_blank" rel="noopener">Luogu点我！</a></p>
+        <p>T2（矩阵快速幂）:</p>
+<p><a href="https://www.luogu.org/problemnew/show/P2151" target="_blank" rel="noopener">Luogu点我！</a></p>
+<p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1875" target="_blank" rel="noopener">BZOJ点我！</a></p>
 <a id="more"></a>
-<p><del>看完样例就可以想到：</del></p>
-<h3 id="答案肯定包括第一座房子和最后一座房子。"><a href="#答案肯定包括第一座房子和最后一座房子。" class="headerlink" title="答案肯定包括第一座房子和最后一座房子。"></a>答案肯定包括第一座房子和最后一座房子。</h3><p>简单证明一下。</p>
-<h4 id="如果存在某个方案是选择-a-i-和-a-j-1-lt-i-lt-j-lt-n-c-i-c-j-的"><a href="#如果存在某个方案是选择-a-i-和-a-j-1-lt-i-lt-j-lt-n-c-i-c-j-的" class="headerlink" title="如果存在某个方案是选择 $a_i$ 和 $a_j$ $(1&lt;i&lt;j&lt;n,c_i!=c_j)$ 的"></a>如果存在某个方案是选择 $a_i$ 和 $a_j$ $(1&lt;i&lt;j&lt;n,c_i!=c_j)$ 的</h4><h4 id="那么"><a href="#那么" class="headerlink" title="那么"></a>那么</h4><h4 id="如果-a-1-和-a-i-颜色一样，那-a-1-和-a-j-这个方案更优。"><a href="#如果-a-1-和-a-i-颜色一样，那-a-1-和-a-j-这个方案更优。" class="headerlink" title="如果 $a_1$ 和 $a_i$ 颜色一样，那 $a_1$ 和 $a_j$ 这个方案更优。"></a>如果 $a_1$ 和 $a_i$ 颜色一样，那 $a_1$ 和 $a_j$ 这个方案更优。</h4><h4 id="如果-a-1-和-a-i-颜色不一样，并且-a-1-和-a-j-颜色也不一样，那-a-1-和-a-j-这个方案更优。"><a href="#如果-a-1-和-a-i-颜色不一样，并且-a-1-和-a-j-颜色也不一样，那-a-1-和-a-j-这个方案更优。" class="headerlink" title="如果 $a_1$ 和 $a_i$ 颜色不一样，并且 $a_1$ 和 $a_j$ 颜色也不一样，那 $a_1$ 和 $a_j$ 这个方案更优。"></a>如果 $a_1$ 和 $a_i$ 颜色不一样，并且 $a_1$ 和 $a_j$ 颜色也不一样，那 $a_1$ 和 $a_j$ 这个方案更优。</h4><h4 id="如果-a-j-和-a-n-颜色一样，那-a-i-和-a-n-这个方案更优。"><a href="#如果-a-j-和-a-n-颜色一样，那-a-i-和-a-n-这个方案更优。" class="headerlink" title="如果 $a_j$ 和 $a_n$ 颜色一样，那 $a_i$ 和 $a_n$ 这个方案更优。"></a>如果 $a_j$ 和 $a_n$ 颜色一样，那 $a_i$ 和 $a_n$ 这个方案更优。</h4><h4 id="如果-a-j-和-a-n-颜色不一样，并且-a-i-和-a-n-颜色也不一样，那-a-i-和-a-n-这个方案更优。"><a href="#如果-a-j-和-a-n-颜色不一样，并且-a-i-和-a-n-颜色也不一样，那-a-i-和-a-n-这个方案更优。" class="headerlink" title="如果 $a_j$ 和 $a_n$ 颜色不一样，并且 $a_i$ 和 $a_n$ 颜色也不一样，那 $a_i$ 和 $a_n$ 这个方案更优。"></a>如果 $a_j$ 和 $a_n$ 颜色不一样，并且 $a_i$ 和 $a_n$ 颜色也不一样，那 $a_i$ 和 $a_n$ 这个方案更优。</h4><h4 id="如果-a-1-和-a-j-颜色一样-并且-a-i-和-a-n-颜色一样呢？"><a href="#如果-a-1-和-a-j-颜色一样-并且-a-i-和-a-n-颜色一样呢？" class="headerlink" title="如果 $a_1$ 和 $a_j$ 颜色一样 并且 $a_i$ 和 $a_n$ 颜色一样呢？"></a>如果 $a_1$ 和 $a_j$ 颜色一样 并且 $a_i$ 和 $a_n$ 颜色一样呢？</h4><h4 id="那么因为-a-i-与-a-j-颜色不一样所以-a-1-与-a-n-颜色也不一样啊！那没有比-“-a-1-和-a-n-”-这个方案更好的方案了。"><a href="#那么因为-a-i-与-a-j-颜色不一样所以-a-1-与-a-n-颜色也不一样啊！那没有比-“-a-1-和-a-n-”-这个方案更好的方案了。" class="headerlink" title="那么因为 $a_i$ 与 $a_j$ 颜色不一样所以 $a_1$ 与 $a_n$ 颜色也不一样啊！那没有比 “$a_1$ 和 $a_n$”  这个方案更好的方案了。"></a>那么因为 $a_i$ 与 $a_j$ 颜色不一样所以 $a_1$ 与 $a_n$ 颜色也不一样啊！那没有比 “$a_1$ 和 $a_n$”  这个方案更好的方案了。</h4><h3 id="code："><a href="#code：" class="headerlink" title="code："></a>code：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Set(s,v) memset(s,v,sizeof(s))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LL ans=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)&#123;f=<span class="number">-1</span>;&#125;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;ans=ans*<span class="number">10</span>+ch<span class="number">-48</span>;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">return</span> ans*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(LL x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span>)&#123;<span class="built_in">putchar</span>(<span class="string">'-'</span>);x=-x;&#125;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;<span class="number">9</span>)&#123;write(x/<span class="number">10</span>);&#125;</span><br><span class="line">    <span class="built_in">putchar</span>(x%<span class="number">10</span>|<span class="number">48</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">300005</span>];</span><br><span class="line"><span class="keyword">int</span> dis=<span class="number">-1</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    n=read();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        a[i]=read();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n;i&gt;<span class="number">1</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]!=a[<span class="number">1</span>]&amp;&amp;(i<span class="number">-1</span>)&gt;dis)&#123;</span><br><span class="line">            dis=i<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]!=a[n]&amp;&amp;(n-i)&gt;dis)&#123;</span><br><span class="line">            dis=n-i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    write(dis);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>T2:</p>
+<p><a href="https://imgchr.com/i/A7MAd1" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/04/11/A7MAd1.md.png" alt="A7MAd1.md.png"></a></p>
+<p><img src="https://s2.ax1x.com/2019/04/11/A7MSRU.png" alt="A7MSRU.png"></p>
+<p>数据范围就是矩阵快速幂不解释。</p>
+<p>这题与<a href="https://www.luogu.org/problemnew/show/P4159" target="_blank" rel="noopener">P4159 [SCOI2009]迷路</a>很类似，就是多了限制条件，也少了一些条件。</p>
+<p>少了是边的权值变得只有1这一种权值。</p>
+<p>多了不能 A-&gt;B-&gt;A 这种的走法。</p>
+<p>如果没有限制走法，那么就是裸矩阵快速幂，只要将每个点看做矩阵上的元素，进行矩阵幂运算即可。</p>
+<h1 id="f-t-i-j-sum-k-1-n-f-t-1-i-k-times-f-t-1-k-j"><a href="#f-t-i-j-sum-k-1-n-f-t-1-i-k-times-f-t-1-k-j" class="headerlink" title="$ f_t[i][j] = \sum_{k=1}^{n} f_{t-1}[i][k] \times f_{t-1}[k][j]$"></a>$ f_t[i][j] = \sum_{k=1}^{n} f_{t-1}[i][k] \times f_{t-1}[k][j]$</h1><p>也就是裸的矩阵乘法。</p>
+<p>但是限制了一条边走过之后不能立马走回来。</p>
+<p>那只要将矩阵中的点换成边即可:</p>
+<h1 id="f-i-i-j-表示从-第i条边的起点-走到-第j条边的终点的方案数。"><a href="#f-i-i-j-表示从-第i条边的起点-走到-第j条边的终点的方案数。" class="headerlink" title="$f_i[i][j]$ 表示从 第i条边的起点 走到 第j条边的终点的方案数。"></a>$f_i[i][j]$ 表示从 第i条边的起点 走到 第j条边的终点的方案数。</h1><p>那就可以解决这个问题了。</p>
+<p>upd:</p>
+<h3 id="问：为什么第65行的地方需要建立一条虚边？"><a href="#问：为什么第65行的地方需要建立一条虚边？" class="headerlink" title="问：为什么第65行的地方需要建立一条虚边？"></a>问：为什么第65行的地方需要建立一条虚边？</h3><h3 id="答：因为否则最终统计答案的时候不能确定从哪一条边的起点到终点的方案数了。"><a href="#答：因为否则最终统计答案的时候不能确定从哪一条边的起点到终点的方案数了。" class="headerlink" title="答：因为否则最终统计答案的时候不能确定从哪一条边的起点到终点的方案数了。"></a>答：因为否则最终统计答案的时候不能确定从哪一条边的起点到终点的方案数了。</h3><h3 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> R register</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Set(s,v) memset(s,v,sizeof(s))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LL ans=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)&#123;f=<span class="number">-1</span>;&#125;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;ans=(ans&lt;&lt;<span class="number">3</span>)+(ans&lt;&lt;<span class="number">1</span>)+(ch<span class="number">-48</span>);ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">return</span> ans*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(LL x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span>)&#123;<span class="built_in">putchar</span>(<span class="string">'-'</span>);x=-x;&#125;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;<span class="number">9</span>)&#123;write(x/<span class="number">10</span>);&#125;</span><br><span class="line">    <span class="built_in">putchar</span>(x%<span class="number">10</span>|<span class="number">48</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD=<span class="number">45989</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">mat</span>&#123;</span></span><br><span class="line">    LL x[<span class="number">155</span>][<span class="number">155</span>];</span><br><span class="line">&#125;s,f;</span><br><span class="line">LL ans;</span><br><span class="line"><span class="keyword">int</span> n,m,t,st,ed;</span><br><span class="line"><span class="keyword">int</span> x[<span class="number">128</span>],y[<span class="number">128</span>],cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">debug</span><span class="params">(mat x)</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"DEBUG:\n"</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=cnt;++j)&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>,x.x[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">mat <span class="title">mul</span><span class="params">(mat A,mat B)</span></span>&#123;</span><br><span class="line">    mat res;</span><br><span class="line">    Set(res.x,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (R <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (R <span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=cnt;++k)</span><br><span class="line">            <span class="keyword">if</span>(A.x[i][k])&#123;</span><br><span class="line">                <span class="keyword">for</span> (R <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=cnt;++j)&#123;</span><br><span class="line">                    res.x[i][j]=res.x[i][j]+(A.x[i][k]*B.x[k][j])%MOD;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">for</span> (R <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=cnt;++j) res.x[i][j]%=MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">mat <span class="title">mksm</span><span class="params">(mat a,LL b)</span></span>&#123;</span><br><span class="line">    mat res=s,base=a;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)&#123;</span><br><span class="line">            res=mul(res,base);</span><br><span class="line">        &#125;</span><br><span class="line">        base=mul(base,base);</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    freopen(<span class="string">"desire.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    freopen(<span class="string">"desire.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">    n=read();m=read();t=read();st=read();ed=read();</span><br><span class="line">    ++st;++ed;</span><br><span class="line">    ++cnt;x[cnt]=<span class="number">0</span>;y[cnt]=st;</span><br><span class="line">    <span class="keyword">for</span> (R <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)&#123;</span><br><span class="line">        <span class="keyword">int</span> u=read(),v=read();</span><br><span class="line">        ++u,++v;</span><br><span class="line">        ++cnt;x[cnt]=u;y[cnt]=v;</span><br><span class="line">        ++cnt;x[cnt]=v;y[cnt]=u;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (R <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;++i)&#123;</span><br><span class="line">        s.x[i][i]=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (R <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (R <span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=cnt;++j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i==j||i==(j^<span class="number">1</span>)||y[i]!=x[j])&#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                f.x[i][j]=<span class="number">1</span>;<span class="comment">//从标号为i的边的起点走到标号为j的边的终点的方案数。 </span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//    printf("!!%d\n",cnt);</span></span><br><span class="line"><span class="comment">//    debug(f);</span></span><br><span class="line"><span class="comment">//    getchar();</span></span><br><span class="line">    f=mksm(f,t);</span><br><span class="line">    <span class="keyword">for</span> (R <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(y[i]==ed)&#123;</span><br><span class="line">            ans=(ans+f.x[<span class="number">1</span>][i])%MOD;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    write(ans);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -195,21 +209,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CF</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -260,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://syuy.github.io/2019/04/09/CF1119A Ilya and a Colorful Walk/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://syuy.github.io/2019/04/11/4.10模拟赛T2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,15 +272,6 @@
 
   
 <nav id="article-nav">
-  
-    <a href="/2019/04/11/4.10模拟赛小结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          &#39;4.10模拟赛T2&#39;
-        
-      </div>
-    </a>
   
   
     <a href="/2019/04/02/2721 [Violet 5]樱花/" id="article-nav-older" class="article-nav-link-wrap">
@@ -436,27 +426,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">模拟赛</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">小结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CF</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">粒子群优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -465,6 +443,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">模拟赛</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">小结</a>
               </li>
             
             <div class="clearfix"></div>

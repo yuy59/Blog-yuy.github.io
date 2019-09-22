@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://syuy.github.io">
   <title>&#39;题解 P3382 【【模板】三分法】(粒子群优化)&#39; | yuy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法其重要的迭代用的公式是这条:$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$">
+  <meta name="description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法">
 <meta name="keywords" content="题解,粒子群优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&#39;题解 P3382 【【模板】三分法】(粒子群优化)&#39;">
 <meta property="og:url" content="http://syuy.github.io/2019/02/14/luoguP3328/index.html">
 <meta property="og:site_name" content="yuy&#39;s blog">
-<meta property="og:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法其重要的迭代用的公式是这条:$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$">
+<meta property="og:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/02/14/kBtFJA.png">
-<meta property="og:updated_time" content="2019-03-29T13:10:05.098Z">
+<meta property="og:updated_time" content="2019-09-22T01:42:57.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&#39;题解 P3382 【【模板】三分法】(粒子群优化)&#39;">
-<meta name="twitter:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法其重要的迭代用的公式是这条:$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$">
+<meta name="twitter:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/02/14/kBtFJA.png">
   
     <link rel="alternative" href="/atom.xml" title="yuy&#39;s blog" type="application/atom+xml">
@@ -183,8 +183,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="粒子群优化（Particle-Swarm-Optimization-PSO），又称微粒群算法"><a href="#粒子群优化（Particle-Swarm-Optimization-PSO），又称微粒群算法" class="headerlink" title="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法"></a>粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法</h3><h4 id="其重要的迭代用的公式是这条"><a href="#其重要的迭代用的公式是这条" class="headerlink" title="其重要的迭代用的公式是这条:"></a>其重要的迭代用的公式是这条:</h4><h2 id="v-i-v-i×w-c×rand-×-pbest-i-gbest-2×x-i"><a href="#v-i-v-i×w-c×rand-×-pbest-i-gbest-2×x-i" class="headerlink" title="$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$"></a>$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$</h2><a id="more"></a>
-<p>其中：</p>
+        <h3 id="粒子群优化（Particle-Swarm-Optimization-PSO），又称微粒群算法"><a href="#粒子群优化（Particle-Swarm-Optimization-PSO），又称微粒群算法" class="headerlink" title="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法"></a>粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法</h3><a id="more"></a>
+<h4 id="其重要的迭代用的公式是这条"><a href="#其重要的迭代用的公式是这条" class="headerlink" title="其重要的迭代用的公式是这条:"></a>其重要的迭代用的公式是这条:</h4><h2 id="v-i-v-i×w-c×rand-×-pbest-i-gbest-2×x-i"><a href="#v-i-v-i×w-c×rand-×-pbest-i-gbest-2×x-i" class="headerlink" title="$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$"></a>$v_i=v_i×w+c×rand()×(pbest_i+gbest- 2×x_i)$</h2><p>其中：</p>
 <p>$v_i$是速度</p>
 <p>$w$是惯性因子((0,1)的实数)，和学习因子相反，就是该粒子原来的速度的 <strong>参考权重</strong> 。比如我的这个程序里取的是0.5，而据说从大到小衰减会更好。因为大的时候会重视每个<strong>个体的价值</strong>，可以更全面的寻找可行解，而越趋于0就越注重<strong>社会的价值</strong>就是所有粒子中的最优解。</p>
 <p>$C$是学习因子也就是权重一般取$2$。</p>
@@ -446,27 +446,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">模拟赛</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">小结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CF</a>
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">粒子群优化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -475,6 +463,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">模拟赛</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">小结</a>
               </li>
             
             <div class="clearfix"></div>
