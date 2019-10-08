@@ -9,7 +9,7 @@
   <title>题解 P3382 【【模板】三分法】(粒子群优化) | yuy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法">
-<meta name="keywords" content="题解,粒子群优化">
+<meta name="keywords" content="题解,随机化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="题解 P3382 【【模板】三分法】(粒子群优化)">
 <meta property="og:url" content="https://syuy.top/2019/02/14/luoguP3328/index.html">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/02/14/kBtFJA.png">
-<meta property="og:updated_time" content="2019-09-23T08:48:07.424Z">
+<meta property="og:updated_time" content="2019-10-08T10:14:45.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="题解 P3382 【【模板】三分法】(粒子群优化)">
 <meta name="twitter:description" content="粒子群优化（Particle Swarm Optimization,PSO），又称微粒群算法">
@@ -197,7 +197,6 @@
 <p>然后通过公式迭代他个$ 100 $次。</p>
 <p>那就可以得到答案了。</p>
 <h4 id="一些更详细的内容都写在了代码里了。"><a href="#一些更详细的内容都写在了代码里了。" class="headerlink" title="一些更详细的内容都写在了代码里了。"></a>一些更详细的内容都写在了代码里了。</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> cnt=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">double</span> xs[<span class="number">15</span>];<span class="comment">//系数</span></span><br><span class="line"><span class="keyword">double</span> l,r;<span class="comment">//x的范围</span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">double</span> x)</span> </span>&#123;<span class="comment">//计算函数值</span></span><br><span class="line">    <span class="keyword">double</span> y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n+<span class="number">1</span>; i&gt;=<span class="number">1</span>; i--) &#123;</span><br><span class="line">        y+=xs[n-i+<span class="number">2</span>]*<span class="built_in">pow</span>(x,i<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Rand</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">double</span>)rand()/RAND_MAX;<span class="comment">//返回一个[0,1]的随机实数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    <span class="keyword">double</span> xv,x,y,besty,bestx;</span><br><span class="line">&#125; b[<span class="number">105</span>];</span><br><span class="line"><span class="comment">//xv是速度向量，x是位置，y是当前位置的函数值，besty是该粒子历史最优值，bestx是该粒子历史最优值时的x的值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> by=<span class="number">-1e233</span>,bx;</span><br><span class="line"><span class="comment">//by是全局当前最优值，bbx是取到全局最优值时的自变量x</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//更新速度向量</span></span><br><span class="line">    <span class="comment">//速度向量  惯性                 全局最优 局部最优  当前位置</span></span><br><span class="line">    b[a].xv=b[a].xv*<span class="number">0.5</span>+Rand()*<span class="number">2</span>*(bx+b[a].bestx-b[a].x*<span class="number">2</span>);<span class="comment">//更新公式</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//通过速度向量更新位置</span></span><br><span class="line">    b[a].x+=b[a].xv;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//位置出界处理           速度向量方向反转</span></span><br><span class="line">    <span class="keyword">if</span> (b[a].x&lt;l) b[a].x=l,b[a].xv=b[a].xv*<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (b[a].x&gt;r) b[a].x=r,b[a].xv=b[a].xv*<span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    b[a].y=f(b[a].x);     <span class="comment">//计算当前位置函数值</span></span><br><span class="line">    <span class="keyword">if</span> (b[a].y&gt;b[a].besty) &#123; <span class="comment">//更新局部最优解</span></span><br><span class="line">        b[a].bestx=b[a].x;</span><br><span class="line">        b[a].besty=b[a].y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%lf%lf"</span>,&amp;n,&amp;l,&amp;r);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n+<span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;xs[i]);<span class="comment">//读入系数</span></span><br><span class="line">    &#125;</span><br><span class="line">    srand(xs[<span class="number">1</span>]+xs[n]);</span><br><span class="line">    <span class="comment">//生成粒子</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=cnt; i++) &#123;</span><br><span class="line">        <span class="comment">//xv是速度向量，x是位置，y是当前位置的函数值，besty是该粒子历史最优值，bestx是该粒子历史最优值时的x的值</span></span><br><span class="line">        b[i].x=b[i].bestx=l+Rand()*(r-l);<span class="comment">//初始x的值 为 l~r 的一个实数</span></span><br><span class="line">        b[i].xv=<span class="number">0</span>;        <span class="comment">//速度向量初始化为0</span></span><br><span class="line">        b[i].y=b[i].besty=f(b[i].x);    <span class="comment">//计算当前函数值</span></span><br><span class="line">        <span class="keyword">if</span> (by&lt;b[i].y) &#123; <span class="comment">//若当前函数值优于全局最优函数值则更新全局最优</span></span><br><span class="line">            bx=b[i].bestx;</span><br><span class="line">            by=b[i].besty;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//开始迭代</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">1</span>; k&lt;=<span class="number">100</span>; k++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=cnt; i++) &#123;</span><br><span class="line">            <span class="comment">//对每个粒子速度和位置更新</span></span><br><span class="line">            update(i);</span><br><span class="line">            <span class="keyword">if</span> (by&lt;b[i].besty) &#123;</span><br><span class="line">                <span class="comment">//更新全局最优解</span></span><br><span class="line">                bx=b[i].bestx;</span><br><span class="line">                by=b[i].besty;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.5lf\n"</span>,bx);<span class="comment">//全局最优的x的值即为答案</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
       
 
       
@@ -214,7 +213,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">粒子群优化</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">随机化</a>
         		</li>
       		
 		</ul>
@@ -467,19 +466,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数论</a>
+                <a href="javascript:void(0)" class="js-tag color4">STL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">模拟赛</a>
+                <a href="javascript:void(0)" class="js-tag color4">题解 </a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">小结</a>
+                <a href="javascript:void(0)" class="js-tag color5">矩阵乘法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color3">构造</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,11 +486,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+                <a href="javascript:void(0)" class="js-tag color4">随机化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">粒子群优化</a>
+                <a href="javascript:void(0)" class="js-tag color3">初赛</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
             
             <div class="clearfix"></div>
