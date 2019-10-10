@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yuy&#39;s blog">
 <meta property="og:description" content="挺早就想要开始做的项目，帮助自己梳理一下知识点，方便回顾。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T12:47:18.931Z">
+<meta property="og:updated_time" content="2019-10-10T11:54:40.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初赛知识整理">
 <meta name="twitter:description" content="挺早就想要开始做的项目，帮助自己梳理一下知识点，方便回顾。">
@@ -190,8 +190,12 @@
 <p>网络通信就好比送快递，商品外面的一层层包裹就是各种协议，协议包含了商品信息、收货地址、收件人、联系方式等，然后还需要配送车、配送站、快递员，商品才能最终到达用户手中。<br>一般情况下，快递是不能直达的，需要先转发到对应的配送站，然后由配送站再进行派件。<br>配送车就是物理介质，配送站就是网关， 快递员就是路由器，收货地址就是IP地址，联系方式就是MAC地址。<br>快递员负责把包裹转发到各个配送站，配送站根据收获地址里的省市区，确认是否需要继续转发到其他配送站，当包裹到达了目标配送站以后，配送站再根据联系方式找到收件人进行派件。  </p>
 </blockquote>
 <p>链路层的主要工作就是对电信号进行分组并形成具有特定意义的数据帧，然后以广播的形式通过物理介质发送给接收方</p>
+<p>网络层的主要工作是定义网络地址，区分网段，子网内MAC寻址，对于不同子网的数据包进行路由。</p>
+<p>传输层的主要工作是定义端口，标识应用程序身份，实现端口到端口的通信，TCP协议可以保证数据传输的可靠性。</p>
+<p>应用层的主要工作就是定义数据格式并按照对应的格式解读数据</p>
 <p>IP地址和子网掩码通过按位与运算后就可以得到网络地址</p>
 <p>网关是互联网上子网与子网之间的桥梁，设备：路由器</p>
+<p>简单来说TCP就是有确认机制的UDP协议，TCP 协议在 UDP 基础之上建立了三次对话的确认机制</p>
 <h3 id="2-问题求解"><a href="#2-问题求解" class="headerlink" title="2. 问题求解"></a>2. 问题求解</h3>
       
 
@@ -474,15 +478,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">随机化</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">初赛</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
