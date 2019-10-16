@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yuy&#39;s blog">
 <meta property="og:description" content="挺早就想要开始做的项目，帮助自己梳理一下知识点，方便回顾。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-10T11:54:40.435Z">
+<meta property="og:updated_time" content="2019-10-16T11:58:39.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初赛知识整理">
 <meta name="twitter:description" content="挺早就想要开始做的项目，帮助自己梳理一下知识点，方便回顾。">
@@ -185,6 +185,7 @@
 <p>挺早就想要开始做的项目，帮助自己梳理一下知识点，方便回顾。<br><a id="more"></a></p>
 </blockquote>
 <h3 id="1-计算机常识"><a href="#1-计算机常识" class="headerlink" title="1. 计算机常识"></a>1. 计算机常识</h3><p>人工智能之父——艾伦·麦席森·图灵<br>信息论之父——克劳德·香农<br>计算机之父、博弈论之父——约翰·冯·诺依曼</p>
+<p>windows10发布时间：2015年7月29日<br>鸿蒙（HarmonyOS）发布时间：2019年8月9日<br>中国5G开始商用时间：2019年6月6日<br>互联网诞生时间：1969年（美国的阿帕网(ARPANET)）</p>
 <h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><p>TCP/IP协议栈：<br>  4层结构：应用层、传输层、网络层、数据链路层。<br>  应用层  协议：HTTP、FTP、SMTP…<br>  传输层  协议：TCP、UDP （负责网络传输和会话建立）<br>  网络层  协议：IP、ARP、路由协议，设备：路由器 （实现寻址功能）<br>  链路层  协议：以太网，设备：交换机 （数据最终生成以太网数据包）</p>
 <blockquote>
 <p>网络通信就好比送快递，商品外面的一层层包裹就是各种协议，协议包含了商品信息、收货地址、收件人、联系方式等，然后还需要配送车、配送站、快递员，商品才能最终到达用户手中。<br>一般情况下，快递是不能直达的，需要先转发到对应的配送站，然后由配送站再进行派件。<br>配送车就是物理介质，配送站就是网关， 快递员就是路由器，收货地址就是IP地址，联系方式就是MAC地址。<br>快递员负责把包裹转发到各个配送站，配送站根据收获地址里的省市区，确认是否需要继续转发到其他配送站，当包裹到达了目标配送站以后，配送站再根据联系方式找到收件人进行派件。  </p>
@@ -196,6 +197,125 @@
 <p>IP地址和子网掩码通过按位与运算后就可以得到网络地址</p>
 <p>网关是互联网上子网与子网之间的桥梁，设备：路由器</p>
 <p>简单来说TCP就是有确认机制的UDP协议，TCP 协议在 UDP 基础之上建立了三次对话的确认机制</p>
+<h4 id="原码、反码、补码"><a href="#原码、反码、补码" class="headerlink" title="原码、反码、补码"></a>原码、反码、补码</h4><p>原码：符号位（最高位的1、0表示负、正）+真值(该数的二进制表示)；<br>反码：原码各位取反（除符号位）；<br>补码：反码+1</p>
+<p>特别的，正数的原码=反码=补码<br>例如：<br>将5用原码、反码、补码表示（最高位为符号位）</p>
+<table>
+<thead>
+<tr>
+<th>原码</th>
+<th>反码</th>
+<th>补码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0101</td>
+<td>0101</td>
+<td>0101</td>
+</tr>
+</tbody>
+</table>
+<p>将-5用原码、反码、补码表示（最高位为符号位）</p>
+<table>
+<thead>
+<tr>
+<th>原码</th>
+<th>反码</th>
+<th>补码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1101</td>
+<td>1010</td>
+<td>1011</td>
+</tr>
+</tbody>
+</table>
+<p>原码可以没有符号位</p>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>IEEE 754：二进制浮点数算术标准<br>单精度浮点数4字节</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1bit</td>
+<td>8bit</td>
+<td>23bit</td>
+</tr>
+</tbody>
+</table>
+<p>双精度浮点数8字节</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>阶码</th>
+<th>尾数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1bit</td>
+<td>11bit</td>
+<td>52bit</td>
+</tr>
+</tbody>
+</table>
+<h4 id="常见运算符优先级"><a href="#常见运算符优先级" class="headerlink" title="常见运算符优先级"></a>常见运算符优先级</h4><table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>结合性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>！、~</td>
+<td>从右到左</td>
+</tr>
+<tr>
+<td>2</td>
+<td>*、/、%</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+、-</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&lt;&lt;、&gt;&gt;</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td>5</td>
+<td>与</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td>6</td>
+<td>异或</td>
+<td>从左到右</td>
+</tr>
+<tr>
+<td>7</td>
+<td>或</td>
+<td>从左到右</td>
+</tr>
+</tbody>
+</table>
+<h4 id="什么是P、NP、NPC问题？"><a href="#什么是P、NP、NPC问题？" class="headerlink" title="什么是P、NP、NPC问题？"></a>什么是P、NP、NPC问题？</h4><p>matrix67的博客总能给你带来惊喜。</p>
+<p><a href="http://www.matrix67.com/blog/archives/105" target="_blank" rel="noopener">http://www.matrix67.com/blog/archives/105</a></p>
+<h4 id="关于CCF"><a href="#关于CCF" class="headerlink" title="关于CCF"></a>关于CCF</h4><p>官网：<a href="https://www.ccf.org.cn/" target="_blank" rel="noopener">https://www.ccf.org.cn/</a><br>NOI举办时间1984年<br>NOIP举办时间1995年——2019年（共24次）</p>
 <h3 id="2-问题求解"><a href="#2-问题求解" class="headerlink" title="2. 问题求解"></a>2. 问题求解</h3>
       
 
@@ -462,11 +582,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数论</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">STL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,10 +607,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">初赛</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
